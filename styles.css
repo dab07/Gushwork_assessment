@@ -728,6 +728,48 @@ body {
     }
 }
 
+@media (max-width: 360px) {
+    .header2 {
+        padding: 48px 0;
+    }
+    
+    .header2 .container {
+        padding: 0 16px;
+    }
+    
+    .specs-title {
+        font-size: 24px;
+    }
+    
+    .specs-subtitle {
+        font-size: 13px;
+        margin-bottom: 32px;
+    }
+    
+    .specs-table {
+        margin-bottom: 32px;
+    }
+    
+    .specs-cell {
+        padding: 12px 16px;
+        font-size: 14px;
+    }
+    
+    .specs-cell:first-child {
+        padding: 12px 16px 8px;
+        font-size: 12px;
+    }
+    
+    .specs-row:not(.specs-header-row) .specs-cell:last-child {
+        padding: 8px 16px 12px;
+    }
+    
+    .btn-download {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
 
 /* FAQ Section */
 .header4 {
