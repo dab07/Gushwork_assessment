@@ -170,23 +170,29 @@ const downloadDatasheetBtn = document.getElementById('downloadDatasheetBtn');
 const closeModal = document.getElementById('closeModal');
 const catalogueForm = document.getElementById('catalogueForm');
 
-// Open modal when download button is clicked
+// Quote Modal
+const quoteModal = document.getElementById('quoteModal');
+const requestQuoteBtn = document.getElementById('requestQuoteBtn');
+const closeQuoteModal = document.getElementById('closeQuoteModal');
+const quoteForm = document.getElementById('quoteForm');
+
+// Open catalogue modal when download button is clicked
 if (downloadDatasheetBtn) {
     downloadDatasheetBtn.addEventListener('click', () => {
         catalogueModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
+        document.body.style.overflow = 'hidden';
     });
 }
 
-// Close modal when X button is clicked
+// Close catalogue modal when X button is clicked
 if (closeModal) {
     closeModal.addEventListener('click', () => {
         catalogueModal.classList.remove('active');
-        document.body.style.overflow = 'auto'; // Restore scrolling
+        document.body.style.overflow = 'auto';
     });
 }
 
-// Close modal when clicking outside the modal content
+// Close catalogue modal when clicking outside
 catalogueModal.addEventListener('click', (e) => {
     if (e.target === catalogueModal) {
         catalogueModal.classList.remove('active');
@@ -194,11 +200,10 @@ catalogueModal.addEventListener('click', (e) => {
     }
 });
 
-// Handle form submission
+// Handle catalogue form submission
 if (catalogueForm) {
     catalogueForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        // Add your form submission logic here
         alert('Thank you! We will send the catalogue to your email shortly.');
         catalogueModal.classList.remove('active');
         document.body.style.overflow = 'auto';
@@ -206,10 +211,51 @@ if (catalogueForm) {
     });
 }
 
-// Close modal with Escape key
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && catalogueModal.classList.contains('active')) {
-        catalogueModal.classList.remove('active');
+// Open quote modal when request quote button is clicked
+if (requestQuoteBtn) {
+    requestQuoteBtn.addEventListener('click', () => {
+        quoteModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+}
+
+// Close quote modal when X button is clicked
+if (closeQuoteModal) {
+    closeQuoteModal.addEventListener('click', () => {
+        quoteModal.classList.remove('active');
         document.body.style.overflow = 'auto';
+    });
+}
+
+// Close quote modal when clicking outside
+quoteModal.addEventListener('click', (e) => {
+    if (e.target === quoteModal) {
+        quoteModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Handle quote form submission
+if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! We will call you back shortly.');
+        quoteModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        quoteForm.reset();
+    });
+}
+
+// Close modals with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        if (catalogueModal.classList.contains('active')) {
+            catalogueModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+        if (quoteModal.classList.contains('active')) {
+            quoteModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
     }
 });

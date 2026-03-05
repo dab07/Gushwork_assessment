@@ -246,7 +246,7 @@
                     </div>
                 </div>
 
-                <button class="btn-quote">Request a Quote</button>
+                <button class="btn-quote" id="requestQuoteBtn">Request a Quote</button>
             </div>
         </section>        
 
@@ -693,17 +693,65 @@
     <!-- Email Catalogue Modal -->
     <div class="modal-overlay" id="catalogueModal">
         <div class="modal-content">
-            <button class="modal-close" id="closeModal">&times;</button>
-            <h3 class="modal-title">Let us email the entire catalogue to you</h3>
-            <form class="modal-form" id="catalogueForm">
-                <label class="modal-label">Your Email *</label>
-                <input type="email" placeholder="example@gmail.com" class="modal-input" required>
-                
-                <label class="modal-label">Your Contact (Optional)</label>
-                <input type="tel" placeholder="+91-0000000000" class="modal-input">
-                
-                <button type="submit" class="modal-submit-btn">Download Brochure</button>
-            </form>
+            <div class="modal-header">
+                <h3 class="modal-title">Let us email the entire catalogue to you</h3>
+                <button class="modal-close" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form class="modal-form" id="catalogueForm">
+                    <div class="form-group">
+                        <label class="modal-label">Your Email *</label>
+                        <input type="email" placeholder="example@gmail.com" class="modal-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="modal-label">Your Contact (Optional)</label>
+                        <input type="tel" placeholder="+91-0000000000" class="modal-input">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-submit-btn" form="catalogueForm">Download Brochure</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="quoteModal">
+        <div class="modal-content modal-content-large">
+            <div class="modal-header">
+                <h3 class="modal-title">Request a call back</h3>
+                <button class="modal-close" id="closeQuoteModal">&times;</button>
+            </div>
+            <div class="modal-body modal-body-large">
+                <form class="modal-form" id="quoteForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" class="modal-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" placeholder="Company Name" class="modal-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" class="modal-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <div class="phone-input-wrapper">
+                            <select class="country-code-select">
+                                <option value="+91">+91</option>
+                                <option value="+1">+1</option>
+                                <option value="+44">+44</option>
+                                <option value="+86">+86</option>
+                            </select>
+                            <input type="tel" placeholder="7003026616" class="modal-input phone-input-field" required>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="modal-submit-btn" form="quoteForm">Submit Form</button>
+            </div>
         </div>
     </div>
 
