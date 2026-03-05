@@ -167,7 +167,7 @@
                     </div>
                 </div>
 
-                <button class="btn-download">
+                <button class="btn-download" id="downloadDatasheetBtn">
                     <span class="download-icon">⬇</span>
                     Download Full Technical Datasheet
                 </button>
@@ -689,6 +689,23 @@
             </div>
         </div>
     </footer>
+
+    <!-- Email Catalogue Modal -->
+    <div class="modal-overlay" id="catalogueModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3 class="modal-title">Let us email the entire catalogue to you</h3>
+            <form class="modal-form" id="catalogueForm">
+                <label class="modal-label">Your Email *</label>
+                <input type="email" placeholder="example@gmail.com" class="modal-input" required>
+                
+                <label class="modal-label">Your Contact (Optional)</label>
+                <input type="tel" placeholder="+91-0000000000" class="modal-input">
+                
+                <button type="submit" class="modal-submit-btn">Download Brochure</button>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

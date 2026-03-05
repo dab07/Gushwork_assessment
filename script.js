@@ -162,3 +162,54 @@ if (testimonialsGrid && testimonialPrevBtn && testimonialNextBtn) {
         });
     });
 }
+
+
+// Modal functionality
+const catalogueModal = document.getElementById('catalogueModal');
+const downloadDatasheetBtn = document.getElementById('downloadDatasheetBtn');
+const closeModal = document.getElementById('closeModal');
+const catalogueForm = document.getElementById('catalogueForm');
+
+// Open modal when download button is clicked
+if (downloadDatasheetBtn) {
+    downloadDatasheetBtn.addEventListener('click', () => {
+        catalogueModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    });
+}
+
+// Close modal when X button is clicked
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        catalogueModal.classList.remove('active');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    });
+}
+
+// Close modal when clicking outside the modal content
+catalogueModal.addEventListener('click', (e) => {
+    if (e.target === catalogueModal) {
+        catalogueModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
+
+// Handle form submission
+if (catalogueForm) {
+    catalogueForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        // Add your form submission logic here
+        alert('Thank you! We will send the catalogue to your email shortly.');
+        catalogueModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        catalogueForm.reset();
+    });
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && catalogueModal.classList.contains('active')) {
+        catalogueModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
