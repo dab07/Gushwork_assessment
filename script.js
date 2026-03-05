@@ -3,15 +3,18 @@ const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 const mainImage = document.getElementById('mainImage');
 const thumbnails = document.querySelectorAll('.thumbnail');
+const galleryMain = document.getElementById('galleryMain');
+const zoomPreview = document.getElementById('zoomPreview');
 
 let currentImageIndex = 0;
 const images = [
-    'https://via.placeholder.com/480x360/FF6B35/FFFFFF?text=Product+Image+1',
-    'https://via.placeholder.com/480x360/4A90E2/FFFFFF?text=Product+Image+2',
-    'https://via.placeholder.com/480x360/50C878/FFFFFF?text=Product+Image+3',
-    'https://via.placeholder.com/480x360/9B59B6/FFFFFF?text=Product+Image+4',
-    'https://via.placeholder.com/480x360/E74C3C/FFFFFF?text=Product+Image+5',
-    'https://via.placeholder.com/480x360/F39C12/FFFFFF?text=Product+Image+6'
+    'assets/FishingNet.jpg',
+    'assets/FishingNet.jpg',
+    'assets/FishingNet.jpg',
+    'assets/FishingNet.jpg',
+    'assets/FishingNet.jpg',
+    'assets/FishingNet.jpg',
+    'assets/FishingNet.jpg',
 ];
 
 function updateImage(index) {
@@ -38,6 +41,23 @@ thumbnails.forEach((thumb, index) => {
         updateImage(index);
     });
 });
+
+// Zoom preview on hover
+if (galleryMain && zoomPreview && mainImage) {
+    galleryMain.addEventListener('mousemove', (e) => {
+        const rect = mainImage.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Calculate percentage position
+        const xPercent = (x / rect.width) * 100;
+        const yPercent = (y / rect.height) * 100;
+        
+        // Set background image and position
+        zoomPreview.style.backgroundImage = `url(${mainImage.src})`;
+        zoomPreview.style.backgroundPosition = `${xPercent}% ${yPercent}%`;
+    });
+}
 
 // Initialize first image
 updateImage(0);

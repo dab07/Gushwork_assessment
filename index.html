@@ -38,10 +38,11 @@
                 <div class="product-layout">
                     <!-- Image Gallery -->
                     <div class="gallery">
-                        <div class="gallery-main">
+                        <div class="gallery-main" id="galleryMain">
                             <button class="gallery-nav gallery-nav-prev" id="prevBtn">‹</button>
-                            <img src="assests/placeholders.jpeg" alt="HDPE Pipes Installation" class="gallery-image" id="mainImage">
+                            <img src="assets/FishingNet.jpg" alt="HDPE Pipes Installation" class="gallery-image" id="mainImage">
                             <button class="gallery-nav gallery-nav-next" id="nextBtn">›</button>
+                            <div class="zoom-preview" id="zoomPreview"></div>
                         </div>
                         <div class="gallery-thumbnails">
                             <div class="thumbnail active"></div>
@@ -104,12 +105,12 @@
             <div class="container">
                 <p class="trust-text">Trusted by Hundreds of Companies Globally</p>
                 <div class="logos-grid">
-                    <img src="./assests/Euroflex.png" class="logo-item"/>
-                    <img src="./assests/Euroflex.png" class="logo-item"/>
-                    <img src="./assests/Euroflex.png" class="logo-item"/>
-                    <img src="./assests/Euroflex.png" class="logo-item"/>
-                    <img src="./assests/Euroflex.png" class="logo-item logo-hide-mobile"/>
-                    <img src="./assests/Euroflex.png" class="logo-item logo-hide-mobile"/>
+                    <img src="./assets/Euroflex.png" class="logo-item"/>
+                    <img src="./assets/Euroflex.png" class="logo-item"/>
+                    <img src="./assets/Euroflex.png" class="logo-item"/>
+                    <img src="./assets/Euroflex.png" class="logo-item"/>
+                    <img src="./assets/Euroflex.png" class="logo-item logo-hide-mobile"/>
+                    <img src="./assets/Euroflex.png" class="logo-item logo-hide-mobile"/>
                 </div>
             </div>
         </section>
@@ -357,22 +358,26 @@
                 <div class="applications-carousel">
                     <div class="applications-track" id="applicationsTrack">
                         <div class="application-card">
-                            <img src="assests/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
+                            <img src="asse
+ts/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
                             <h3 class="application-title">Fishnet Manufacturing</h3>
                             <p class="application-text">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
                         </div>
                         <div class="application-card">
-                            <img src="assests/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
+                            <img src="asse
+ts/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
                             <h3 class="application-title">Fishnet Manufacturing</h3>
                             <p class="application-text">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
                         </div>
                         <div class="application-card">
-                            <img src="assests/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
+                            <img src="asse
+ts/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
                             <h3 class="application-title">Fishnet Manufacturing</h3>
                             <p class="application-text">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
                         </div>
                         <div class="application-card">
-                            <img src="assests/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
+                            <img src="asse
+ts/placeholders.jpeg" alt="Fishnet Manufacturing" class="application-image">
                             <h3 class="application-title">Fishnet Manufacturing</h3>
                             <p class="application-text">High-performance twisting solutions for packaging yarn, strapping materials, and reinforcement threads used in modern packaging applications.</p>
                         </div>
@@ -388,30 +393,30 @@
                 <h2 class="section-title-center">Advanced HDPE Pipe Manufacturing Process</h2>
                 <p class="section-subtitle-center">Our state-of-the-art extrusion technology ensures consistent quality, optimal material properties, and dimensional accuracy in every pipe we manufacture.</p>
                 
-                <div class="process-tabs">
-                    <button class="process-tab active" data-tab="raw-material">Raw Material</button>
-                    <button class="process-tab" data-tab="extrusion">Extrusion</button>
-                    <button class="process-tab" data-tab="cooling">Cooling</button>
-                    <button class="process-tab" data-tab="sizing">Sizing</button>
-                    <button class="process-tab" data-tab="quality">Quality Control</button>
-                    <button class="process-tab" data-tab="marking">Marking</button>
-                    <button class="process-tab" data-tab="cutting">Cutting</button>
-                    <button class="process-tab" data-tab="packaging">Packaging</button>
-                </div>
-
-                <div class="process-content">
-                    <div class="process-info">
-                        <h3 class="process-title">High-Grade Raw Material Selection</h3>
-                        <p class="process-description">Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains perfect roundness and wall thickness uniformity.</p>
-                        <ul class="process-features">
-                            <li>PE100 grade material</li>
-                            <li>Optimal molecular weight distribution</li>
-                        </ul>
+                <div class="process-container">
+                    <div class="process-tabs">
+                        <button class="process-tab active" data-tab="raw-material">Raw Material</button>
+                        <button class="process-tab" data-tab="extrusion">Extrusion</button>
+                        <button class="process-tab" data-tab="cooling">Cooling</button>
+                        <button class="process-tab" data-tab="sizing">Sizing</button>
+                        <button class="process-tab" data-tab="quality">Quality Control</button>
+                        <button class="process-tab" data-tab="marking">Marking</button>
+                        <button class="process-tab" data-tab="cutting">Cutting</button>
+                        <button class="process-tab" data-tab="packaging">Packaging</button>
                     </div>
-                    <div class="process-image-container">
-                        <img src="assests/placeholders.jpeg" alt="Manufacturing Process" class="process-image">
-                        <button class="process-nav-btn process-prev">←</button>
-                        <button class="process-nav-btn process-next">→</button>
+
+                    <div class="process-content">
+                        <div class="process-info">
+                            <h3 class="process-title">High-Grade Raw Material Selection</h3>
+                            <p class="process-description">Vacuum sizing tanks ensure precise outer diameter while internal pressure maintains perfect roundness and wall thickness uniformity.</p>
+                            <ul class="process-features">
+                                <li>PE100 grade material</li>
+                                <li>Optimal molecular weight distribution</li>
+                            </ul>
+                        </div>
+                        <div class="process-image-container">
+                            <img src="assets/placeholders.jpeg" alt="Manufacturing Process" class="process-image">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -476,21 +481,21 @@
                     <div class="portfolio-card">
                         <h3 class="portfolio-card-title">HDPE Fittings & Accessories</h3>
                         <p class="portfolio-card-text">Complete range of electrofusion and butt fusion fittings, including elbows, tees, reducers, and couplers for seamless pipe connections.</p>
-                        <img src="assests/placeholders.jpeg" alt="HDPE Fittings" class="portfolio-image">
+                        <img src="assets/placeholders.jpeg" alt="HDPE Fittings" class="portfolio-image">
                         <button class="btn-learn-more">Learn More</button>
                     </div>
 
                     <div class="portfolio-card">
                         <h3 class="portfolio-card-title">Professional Installation Services</h3>
                         <p class="portfolio-card-text">Expert installation and fusion welding services ensuring optimal system performance, compliance with standards, and long-term reliability.</p>
-                        <img src="assests/placeholders.jpeg" alt="Installation Services" class="portfolio-image">
+                        <img src="assets/placeholders.jpeg" alt="Installation Services" class="portfolio-image">
                         <button class="btn-learn-more">Learn More</button>
                     </div>
 
                     <div class="portfolio-card">
                         <h3 class="portfolio-card-title">PE-RT Heating Pipes</h3>
                         <p class="portfolio-card-text">Polyethylene of Raised Temperature resistance pipes ideal for underfloor heating, radiator connections, and hot water applications.</p>
-                        <img src="assests/placeholders.jpeg" alt="PE-RT Heating Pipes" class="portfolio-image">
+                        <img src="assets/placeholders.jpeg" alt="PE-RT Heating Pipes" class="portfolio-image">
                         <button class="btn-learn-more">Learn More</button>
                     </div>
                 </div>
