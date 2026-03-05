@@ -120,6 +120,3 @@ To implement the exact Figma design:
 4. Update the HTML structure to match the Figma layout
 5. Apply exact colors, fonts, and spacing from Figma design tokens
 6. Replace placeholder images with exported assets
-
-## Contact
-For questions or issues, please refer to the assignment guidelines.
