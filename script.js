@@ -141,3 +141,24 @@ processTabs.forEach(tab => {
         tab.classList.add('active');
     });
 });
+
+// Testimonials Carousel (header7)
+const testimonialsGrid = document.getElementById('testimonialsGrid');
+const testimonialPrevBtn = document.getElementById('testimonialPrev');
+const testimonialNextBtn = document.getElementById('testimonialNext');
+
+if (testimonialsGrid && testimonialPrevBtn && testimonialNextBtn) {
+    testimonialPrevBtn.addEventListener('click', () => {
+        testimonialsGrid.scrollBy({
+            left: -424,
+            behavior: 'smooth'
+        });
+    });
+
+    testimonialNextBtn.addEventListener('click', () => {
+        testimonialsGrid.scrollBy({
+            left: 424,
+            behavior: 'smooth'
+        });
+    });
+}
