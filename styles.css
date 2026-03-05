@@ -1267,8 +1267,8 @@ body {
     content: '';
     position: absolute;
     top: 50%;
-    left: 0;
-    right: 0;
+    left: 10%;
+    right: 10%;
     height: 1px;
     background: #CFD1D4;
     z-index: 0;
